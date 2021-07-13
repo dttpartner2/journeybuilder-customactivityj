@@ -25,7 +25,17 @@ block content
               
           label.slds-form-element__label.slds-p-top_medium(for='Text')
             abbr.slds-required(title='required')
-            | Text *
+            | Text Message *
+          .slds-form-element__control
+            input#Text.slds-input.js-activity-setting(required='', placeholder='', name='text')
+            
+          label.v-checkbox
+          input(type="checkbox")
+            .v-label Label
+            
+           label.slds-form-element__label.slds-p-top_medium(for='URL Shortner')
+            abbr.slds-required(title='required')
+            | Text Message *
           .slds-form-element__control
             input#Text.slds-input.js-activity-setting(required='', placeholder='', name='text')
 
