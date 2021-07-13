@@ -6,7 +6,7 @@
   "type": "REST",
   "lang": {
     "en-US": {
-      "description": "Custom Activity"
+      "description": "SMS BULK"
     }
   },
   "arguments": {
