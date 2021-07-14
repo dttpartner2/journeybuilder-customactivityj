@@ -116,7 +116,7 @@ function onGetEndpoints(endpoints) {
  * Save settings
  */
 function save() {
-    
+    console.log(">>>Event Definition Key " + eventDefinitionKey);
     if($form.valid()) {
         payload['metaData'].isConfigured = true;
 
