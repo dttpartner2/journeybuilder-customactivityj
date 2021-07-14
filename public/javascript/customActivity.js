@@ -17,6 +17,11 @@ let payload = {};
 let $form;
 $(window).ready(onRender);
 
+connection.on('requestedSchema', function (data) {
+   // save schema
+   console.log('*** Schema ***', JSON.stringify(data['schema']));
+});
+
 connection.on('initActivity', initialize);
 connection.on('requestedTokens', onGetTokens);
 connection.on('requestedEndpoints', onGetEndpoints);
@@ -34,6 +39,7 @@ function onRender() {
     connection.trigger('ready');
     connection.trigger('requestTokens');
     connection.trigger('requestEndpoints');
+    connection.trigger('requestSchema');
 
     // validation
     validateForm(function($form) {
