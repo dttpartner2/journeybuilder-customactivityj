@@ -39,24 +39,6 @@ function onRender() {
     connection.trigger('ready');
     connection.trigger('requestTokens');
     connection.trigger('requestEndpoints');
-
-    var eventDefinitionKey;
-connection.trigger('requestTriggerEventDefinition');
-
-connection.on('requestedTriggerEventDefinition',
-function(eventDefinitionModel) {
-    if(eventDefinitionModel){
-
-        eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
-        console.log(">>>Event Definition Key " + eventDefinitionKey);
-        /*If you want to see all*/
-        console.log('>>>Request Trigger', 
-        JSON.stringify(eventDefinitionModel));
-    }
-
-});
-    
-    
     
     // validation
     validateForm(function($form) {
@@ -125,6 +107,23 @@ function onGetEndpoints(endpoints) {
  * Save settings
  */
 function save() {
+    
+    var eventDefinitionKey;
+    connection.trigger('requestTriggerEventDefinition');
+
+    connection.on('requestedTriggerEventDefinition',
+    function(eventDefinitionModel) {
+        if(eventDefinitionModel){
+
+            eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
+            console.log(">>>Event Definition Key " + eventDefinitionKey);
+            /*If you want to see all*/
+            console.log('>>>Request Trigger', 
+            JSON.stringify(eventDefinitionModel));
+        }
+
+    });
+    
     if($form.valid()) {
         payload['metaData'].isConfigured = true;
 
