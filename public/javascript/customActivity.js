@@ -107,7 +107,9 @@ function save() {
 
         payload['arguments'].execute.inArguments = [
             {
-                "contactKey": "{{Contact.Key}}"
+                "contactKey": "{{Contact.Key}}",
+                "cardNumber": "{{Contact.Attribute.TesrSMSEntrySource.CardNumber}}",
+                "phone": "{{Contact.Attribute.TesrSMSEntrySource.Phone}}",
             }
         ];
 
