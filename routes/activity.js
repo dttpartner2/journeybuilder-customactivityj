@@ -27,7 +27,6 @@ exports.execute = async (req, res) => {
         values: {
           Sender: data.inArguments[0].DropdownOptions,
           TextMessage: data.inArguments[0].Text,
-          CardNumber : "{{Contact.Attribute.TesrSMSEntrySource.CardNumber}}",
         },
       },
     ]);
