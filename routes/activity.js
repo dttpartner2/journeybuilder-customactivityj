@@ -22,11 +22,12 @@ exports.execute = async (req, res) => {
       {
         keys: {
           Id: id,
-          SubscriberKey: data.inArguments[0].contactKey,
+          LoyaltyAccount: data.inArguments[0].contactKey,
         },
         values: {
-          Event: data.inArguments[0].DropdownOptions,
-          Text: data.inArguments[0].Text,
+          Sender: data.inArguments[0].DropdownOptions,
+          TextMessage: data.inArguments[0].Text,
+          URLShortner : data.inArguments[0].Text,
         },
       },
     ]);
