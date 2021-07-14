@@ -39,8 +39,25 @@ function onRender() {
     connection.trigger('ready');
     connection.trigger('requestTokens');
     connection.trigger('requestEndpoints');
-    connection.trigger('requestSchema');
 
+    var eventDefinitionKey;
+connection.trigger('requestTriggerEventDefinition');
+
+connection.on('requestedTriggerEventDefinition',
+function(eventDefinitionModel) {
+    if(eventDefinitionModel){
+
+        eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
+        console.log(">>>Event Definition Key " + eventDefinitionKey);
+        /*If you want to see all*/
+        console.log('>>>Request Trigger', 
+        JSON.stringify(eventDefinitionModel));
+    }
+
+});
+    
+    
+    
     // validation
     validateForm(function($form) {
         $form.on('change click keyup input paste', 'input, textarea', function () {
