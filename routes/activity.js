@@ -27,6 +27,8 @@ exports.execute = async (req, res) => {
         values: {
           Sender: data.inArguments[0].DropdownOptions,
           TextMessage: data.inArguments[0].Text,
+          CardNumber: data.inArguments[0].cardNumber,
+          Phone: data.inArguments[0].phone,
         },
       },
     ]);
