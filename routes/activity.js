@@ -29,6 +29,7 @@ exports.execute = async (req, res) => {
           TextMessage: data.inArguments[0].Text,
           CardNumber: data.inArguments[0].cardNumber,
           Phone: data.inArguments[0].phone,
+          Phone: data.inArguments[0].url,
         },
       },
     ]);
