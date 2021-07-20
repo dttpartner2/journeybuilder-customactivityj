@@ -123,9 +123,9 @@ function save() {
         payload['arguments'].execute.inArguments = [
             {
                 "contactKey": "{{Contact.Key}}",
-                "cardNumber": "{{Contact.Attribute.SMS_ENTRY_DE.CardNumber}}",
-                "phone": "{{Contact.Attribute.SMS_ENTRY_DE.Phone}}",
-                "url" : "{{Contact.Attribute.SMS_ENTRY_DE.URL}}",
+                "cardNumber": "{{Contact.Attribute.SMS_ENTRY_DE_CCNT.CardNumber}}",
+                "phone": "{{Contact.Attribute.SMS_ENTRY_DE_CCNT.Phone}}",
+                "url" : "{{Contact.Attribute.SMS_ENTRY_DE_CCNT.URL}}",
                 //"cardNumber": "{{Contact.Attribute."+ eventDefinitionKey+".CardNumber}}",
                 //"phone": "{{Contact.Attribute."+ eventDefinitionKey+".Phone}}",
             }
